@@ -6,9 +6,9 @@
     <title>MITH Thai Cuisine | Authentic Thai Restaurant in Geelong West</title>
     <meta name="description" content="Experience authentic Thai food in Geelong West at MITH Thai Cuisine. Enjoy Pad Thai, Green Curry, Massaman, and more near you. Order delivery via Uber Eats and DoorDash.">
     <meta name="keywords" content="Thai food geelong, Thai restaurant geelong, Thai geelong, thai near me, MITH Thai Cuisine">
-    
+    <!-- Tailwind CSS cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
+        /* Custom Luxury Emerald Green and Gold Brand Colors */
         .bg-brand-green { background-color: #063126; }
         .text-brand-green { color: #063126; }
         .border-brand-green { border-color: #063126; }
@@ -30,94 +31,508 @@
         .hover-brand-gold:hover { background-color: #C5A028; }
     </style>
 </head>
-
 <body class="text-gray-800 antialiased">
 
-<header class="sticky top-0 z-50 bg-brand-green text-white shadow-md">
-    <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <a href="#" class="flex items-center gap-3">
-            <img src="logo.png" alt="MITH Thai Cuisine Logo" class="h-12 w-auto object-contain onerror-hidden" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='block';">
-            <span id="text-logo" class="font-serif text-2xl font-bold tracking-wide text-brand-gold" style="display:none;">MITH Thai Cuisine</span>
-        </a>
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-brand-green text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <!-- Brand Logo Area -->
+            <a href="#" class="flex items-center gap-3">
+                <!-- Smart Logo Feature: If logo.png exists in folder, it shows. If not, falls back to styled text logo -->
+                <img src="logo.png" alt="MITH Thai Cuisine Logo" class="h-12 w-auto object-contain onerror-hidden" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='block';">
+                <span id="text-logo" class="font-serif text-2xl font-bold tracking-wide text-brand-gold" style="display:none;">MITH Thai Cuisine</span>
+            </a>
+            
+            <!-- Quick Navigation Links -->
+            <nav class="flex items-center gap-6 font-medium text-sm tracking-wider uppercase">
+                <a href="#about" class="hover:text-brand-gold transition">About</a>
+                <a href="#menu" class="hover:text-brand-gold transition">Menu</a>
+                <a href="#hours" class="hover:text-brand-gold transition">Hours & Contact</a>
+                <a href="#social" class="text-brand-gold hover:underline transition">Social Media</a>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="flex items-center gap-6 font-medium text-sm tracking-wider uppercase">
-            <a href="#about" class="hover:text-brand-gold transition">About</a>
-            <a href="#menu" class="hover:text-brand-gold transition">Menu</a>
-            <a href="#hours" class="hover:text-brand-gold transition">Hours & Contact</a>
-            <a href="#social" class="text-brand-gold hover:underline transition">Social Media</a>
-        </nav>
-    </div>
-</header>
+    <!-- HERO SECTION -->
+    <section class="relative bg-brand-green text-white py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <!-- Luxury ambiance placeholder image -->
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+            <span class="text-brand-gold uppercase tracking-widest font-semibold text-sm block mb-3">Authentic Thai Dining in Geelong</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">MITH Thai Cuisine</h1>
+            <p class="text-lg text-gray-300 mb-8 font-light">A traditional Thai dining experience in the heart of Geelong West, serving rich, aromatic, and authentic flavours crafted by passion.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#menu" class="bg-brand-gold text-brand-green px-8 py-3 rounded font-semibold hover-brand-gold transition shadow-lg">View Our Menu</a>
+                <a href="tel:+61431231545" class="border border-white text-white px-8 py-3 rounded font-semibold hover:bg-white hover:text-brand-green transition">Call +61 431 231 545</a>
+            </div>
+        </div>
+    </section>
 
-<section id="menu" class="bg-stone-100 py-16">
-<div class="container mx-auto px-4 max-w-5xl">
+    <!-- ORDER ONLINE BANNER (MOBILE FRIENDLY) -->
+    <section class="bg-brand-gold text-brand-green py-6 shadow-inner">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
+            <p class="font-serif text-xl font-bold">Hungry? Get it delivered straight to your door!</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="https://www.ubereats.com/au/store/mith-thai-cuisine/KKLOXHlZRzypbxybwAvUug?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AFd1xnEObwpIQZHv3th5QpOFYCa7ifz8Kg4I3aYM5RSxly6zqPr5i9ClB5R6xKFIwSPpnlq07TCJ67JRJs3naQL8tWhCUi4B4g%3D%3D" target="_blank" class="bg-black text-white px-5 py-2 rounded text-sm font-semibold hover:bg-gray-900 transition flex items-center gap-2">
+                    Order Uber Eats
+                </a>
+                <a href="https://www.doordash.com/store/mith-thai-cuisine-geelong-west-25390298/?utm_campaign=gpa&rwg_token=AFd1xnEbqxYy5wrxj24pC0DsHqpiurqKNYsMx8lFV64WkFE9ju7FKUKCwYG7B3Xh3f3AFREUPxEq9MgF1ukClNU5Yib0jIaWNw%3D%3D" target="_blank" class="bg-[#FF3008] text-white px-5 py-2 rounded text-sm font-semibold hover:bg-[#e22700] transition flex items-center gap-2">
+                    Order DoorDash
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="mb-12">
-<h3 class="font-serif text-2xl font-bold text-brand-green border-b border-gray-300 pb-2 mb-6 flex justify-between items-center">
-    <span>Entrees</span>
-</h3>
+    <!-- ABOUT & AMBIANCE SECTION -->
+    <section id="about" class="py-16 container mx-auto px-4 max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Welcome to MITH</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-green mt-2 mb-6">Our Culinary Story</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    MITH Thai Cuisine offers a traditional Thai dining experience in the heart of Geelong West. Guests can enjoy a variety of classic Thai dishes such as Pad Thai Goong Sod, Khao Pad Kratiem Gai Tod, and Ba Mhee Moo Palo.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Our menu also features hearty mains including Nuer Toon Pad Kaprao and Beef Gaeng Massaman, which are particularly popular among patrons. Highly praised for reflecting the rich and authentic flavours of Thailand.
+                </p>
+                <div class="border-l-4 border-brand-gold pl-4 my-4 italic text-gray-700 bg-amber-50 py-2">
+                    "Hands down the best Thai I have ever had in Melbourne! Delicious and tasty soups, tender meat, well cooked rice dishes." <br>
+                    <span class="text-sm font-semibold block mt-1 not-italic text-gray-500">— Amala A., Customer Review</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=400&h=500&q=80" alt="Thai Cooking Front" class="rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=400&h=500&q=80" alt="Restaurant Interior" class="rounded-lg shadow-md w-full h-64 object-cover mt-6">
+            </div>
+        </div>
+    </section>
 
-<div class="grid md:grid-cols-2 gap-6">
+    <!-- MENU SECTION -->
+    <section id="menu" class="bg-stone-100 py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Delicious &amp; Authentic</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-green mt-2">Our Full Menu</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
+            </div>
 
-<!-- 1 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food1.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Peek Gai Yang Nam Jim Jaew</h4>
-        <p class="text-sm text-gray-500 mt-1">Six grilled marinated chicken wings, served with dry chilli dipping sauce.</p>
-    </div>
-</div>
+            <!-- ENTREES -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl font-bold text-brand-green border-b border-gray-300 pb-2 mb-6 flex justify-between items-center">
+                    <span>Entrees</span>
+                    <span class="text-sm font-sans font-normal text-gray-500">Starter Plates</span>
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Peek Gai Yang Nam Jim Jaew <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">75% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Six grilled marinated chicken wings, served with dry chilli dipping sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$15.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Nuer Tod Nam Jim Jaew</h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried marinated beef, served with dry chilli dipping sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$15.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Gui Chai Tod</h4>
+                            <p class="text-sm text-gray-500 mt-1">Pan fried crispy chive cakes, served with dipping sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$13.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Goong Gra Beuang <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried stuffed and marinated prawn in triangle rice paper, served with plum sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$15.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Moo Satay <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Contains Nuts</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Six skewers. Grilled marinated pork, served with peanut sauce and cucumber relish.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$15.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Tao Hoo Tod (V)</h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried tofu, served with roasted peanuts and plum sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$13.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Tod Mun Pla <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried Thai fish cakes, served with cucumber relish.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$13.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Quail Egg Wontons</h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried quail egg wontons.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$15.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Luk Chin Pla Ra Bert</h4>
+                            <p class="text-sm text-gray-500 mt-1">Deep fried fish balls with dipping sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$13.00</span>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Vegetable Spring rolls <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Crisp rolls filled with a mix of vegetables.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$13.00</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- 2 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food2.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Nuer Tod Nam Jim Jaew</h4>
-        <p class="text-sm text-gray-500 mt-1">Deep fried marinated beef, served with dry chilli dipping sauce.</p>
-    </div>
-</div>
+            <!-- SIDES -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl font-bold text-brand-green border-b border-gray-300 pb-2 mb-6 flex justify-between items-center">
+                    <span>Sides</span>
+                    <span class="text-sm font-sans font-normal text-gray-500">Accompaniments</span>
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Roti <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Soft, flaky Thai flatbread.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$6.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Peanut sauce <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Contains Nuts</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Rich and creamy sauce made with peanuts.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$3.00</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- 3 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food3.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Gui Chai Tod</h4>
-        <p class="text-sm text-gray-500 mt-1">Pan fried crispy chive cakes, served with dipping sauce.</p>
-    </div>
-</div>
+            <!-- MAINS -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl font-bold text-brand-green border-b border-gray-300 pb-2 mb-6 flex justify-between items-center">
+                    <span>Mains</span>
+                    <span class="text-sm font-sans font-normal text-gray-500">Traditional Curries &amp; Stir-fries</span>
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Nuer Toon Pad Kaprao <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Stewed beef stir fried with Thai holy basil and chilli.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$25.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pu Nim Pad Pong Karee <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Soft shell crab stir fried with creamy egg and Thai curry powder.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$29.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Choo Chee Pla Krapong <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Barramundi fillet cooked with coconut milk, Kaffir lime leaf and red curry paste.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$30.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Yum Moo Sam Chan Tod <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai style spicy salad with deep fried pork belly and herbs.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Chicken Green Curry <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai green curry with chicken, Thai eggplant and Thai basil.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Tom Yum Talay <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Mussel, squid and prawn in sour and spicy prawn based soup.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$27.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Beef Massaman Curry <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy &amp; Nuts</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Massaman curry with beef, potatoes and peanuts.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$25.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Yum Talay <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai style spicy salad with mussel, squid, prawn and herbs.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$27.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Gaeng Panang Gai <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Panang curry with chicken.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Stewed Beef Green Curry</h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai green curry with stewed beef, Thai eggplant and Thai basil.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$25.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Stewed Beef Panang Curry</h4>
+                            <p class="text-sm text-gray-500 mt-1">Tender beef in a rich and creamy Panang curry sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$25.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pad Kratiem Prik Thai</h4>
+                            <p class="text-sm text-gray-500 mt-1">Stir fried garlic and Thai white pepper.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Yum Gai Tod <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai style spicy salad with deep fried chicken and herbs.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Larb Gai</h4>
+                            <p class="text-sm text-gray-500 mt-1">Minced chicken cooked with herbs, spices and ground toasted rice.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Larb Nuer <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Minced beef cooked with herbs, spices and ground toasted rice.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pad Pak</h4>
+                            <p class="text-sm text-gray-500 mt-1">Stir fried mixed vegetables in oyster sauce.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pad Thai <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Stir-fried rice noodles with a sweet and sour flavour.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pad See Ew <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">100% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Stir fried flat rice noodles with black soy sauce and Chinese broccoli.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Khao Pad</h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai fried rice with onion, tomato and Chinese broccoli.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- 4 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food4.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Goong Gra Beuang</h4>
-        <p class="text-sm text-gray-500 mt-1">Deep fried stuffed prawn in rice paper, served with plum sauce.</p>
-    </div>
-</div>
+            <!-- RICE AND NOODLES -->
+            <div>
+                <h3 class="font-serif text-2xl font-bold text-brand-green border-b border-gray-300 pb-2 mb-6 flex justify-between items-center">
+                    <span>Rice &amp; Noodles</span>
+                    <span class="text-sm font-sans font-normal text-gray-500">Mains &amp; Staples</span>
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Pad Thai Goong Sod <span class="text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded">Nuts &amp; Spicy</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Stir fried rice noodles with prawn, peanut, egg and bean sprouts.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$27.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Ba Mhee Moo Palo <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">80% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Egg noodles with Thai five spice braised pork and Chinese broccoli.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$27.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Khao Pad Gai</h4>
+                            <p class="text-sm text-gray-500 mt-1">Thai fried rice with chicken, onion, tomato and Chinese broccoli.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Khao Pad Kratiem Gai Tod</h4>
+                            <p class="text-sm text-gray-500 mt-1">Garlic fried rice with deep fried chicken.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$23.00</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm flex justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Khao <span class="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">88% Liked</span></h4>
+                            <p class="text-sm text-gray-500 mt-1">Steamed jasmine rice.</p>
+                        </div>
+                        <span class="font-bold text-brand-green shrink-0">$6.00</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- 5 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food5.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Moo Satay</h4>
-        <p class="text-sm text-gray-500 mt-1">Grilled pork skewers served with peanut sauce.</p>
-    </div>
-</div>
+        </div>
+    </section>
 
-<!-- 6 -->
-<div class="bg-white p-5 rounded-lg shadow-sm flex gap-4 items-center">
-    <img src="images/food6.jpg" class="w-24 h-24 object-cover rounded-lg">
-    <div>
-        <h4 class="font-bold text-lg text-gray-900">Tao Hoo Tod (V)</h4>
-        <p class="text-sm text-gray-500 mt-1">Deep fried tofu served with plum sauce.</p>
-    </div>
-</div>
+    <!-- CUSTOMER REVIEWS SECTIONS -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Testimonials</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-green mt-2 mb-4">What Our Guests Say</h2>
+            <p class="text-amber-500 font-bold text-2xl mb-10">★ 4.8 <span class="text-sm text-gray-500 font-normal">(60+ Ratings on Uber Eats)</span></p>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-stone-50 p-6 rounded-xl shadow-sm border-t-4 border-brand-gold">
+                    <p class="text-gray-600 italic">"Hands down the best Thai I have ever had in Melbourne! Delicious and tasty soups, tender meat , well cooked rice dishes . I have been ordering from you guys for most of the week !!"</p>
+                    <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+                        <span class="font-semibold text-gray-700">Amala A.</span>
+                        <span>13/07/2024</span>
+                    </div>
+                </div>
+                <div class="bg-stone-50 p-6 rounded-xl shadow-sm border-t-4 border-brand-gold">
+                    <p class="text-gray-600 italic">"Just amazing!!!! No words can describe how authentic and tasty the food really is"</p>
+                    <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+                        <span class="font-semibold text-gray-700">Kirsten S.</span>
+                        <span>07/11/2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
-</div>
+    <!-- NEW SOCIAL MEDIA SECTION (SIMPLIFIED TO BUTTON LINKS ONLY) -->
+    <section id="social" class="bg-brand-green text-white py-16 border-t border-brand-gold">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm block mb-2">Connect With Us</span>
+            <h2 class="font-serif text-3xl font-bold mb-4">Follow Our Social Media</h2>
+            <p class="text-gray-300 mb-8 max-w-lg mx-auto">Stay up to date with our latest special dishes, seasonal promotions, and beautiful food stories directly on our official channels.</p>
+            
+            <!-- Sleek External Link Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://www.facebook.com/p/MITH-Thai-Cuisine-100091336732267/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-brand-green font-semibold px-8 py-3.5 rounded shadow hover:bg-brand-gold hover:text-brand-green transition-all duration-300">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                    Visit Our Facebook
+                </a>
+                <a href="https://www.instagram.com/mith_thaicuisine/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-brand-green font-semibold px-8 py-3.5 rounded shadow hover:bg-brand-gold hover:text-brand-green transition-all duration-300">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Visit Our Instagram
+                </a>
+            </div>
+        </div>
+    </section>
 
-</div>
-</section>
+    <!-- TRADING HOURS & CONTACT SECTION -->
+    <section id="hours" class="py-16 bg-stone-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Trading Hours -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-brand-green">
+                    <h3 class="font-serif text-2xl font-bold text-brand-green mb-6">Trading Hours</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold text-red-700">Monday</span>
+                            <span class="text-red-700 font-bold">CLOSED</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Tuesday - Friday</span>
+                            <div class="text-right text-sm">
+                                <span>11:00 am - 2:10 pm</span><br>
+                                <span>5:00 pm - 8:30 pm</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Saturday</span>
+                            <div class="text-right text-sm">
+                                <span>11:00 am - 2:30 pm</span><br>
+                                <span>5:00 pm - 8:30 pm</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between pb-1">
+                            <span class="font-semibold">Sunday</span>
+                            <div class="text-right text-sm">
+                                <span>11:00 am - 2:30 pm</span><br>
+                                <span>5:00 pm - 8:30 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact & Location -->
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-green mb-4">Our Location</h3>
+                        <p class="text-gray-600 mb-2 font-medium">Unit 2/136 Pakington St, Geelong West VIC 3218, Australia</p>
+                        <p class="text-sm text-gray-500 mb-6">(Located inside the historic Geelong West Town Hall)</p>
+                        
+                        <h3 class="font-serif text-xl font-bold text-brand-green mb-2">Phone</h3>
+                        <p class="text-lg text-brand-gold font-bold mb-6"><a href="tel:+61431231545" class="hover:underline">+61 431 231 545</a></p>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/43CmWoXoXi9v4pBH8" target="_blank" class="w-full text-center bg-brand-green text-white py-3 rounded font-semibold hover:bg-opacity-90 transition shadow-md block">
+                        📍 Get Directions on Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-green text-white py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-400">
+            <p class="font-serif text-brand-gold text-lg font-bold mb-2">MITH Thai Cuisine</p>
+            <p class="mb-4">Unit 2/136 Pakington St, Geelong West, VIC 3218</p>
+            <p>&copy; 2026 MITH Thai Cuisine. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
